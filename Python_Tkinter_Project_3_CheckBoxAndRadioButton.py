@@ -21,7 +21,7 @@ CheckBox_1.pack()
 CheckBox_2 = ttk.Checkbutton(window,
                              text= "CheckBox_2",
                              variable = CheckBox_Var,
-                             onvalue = 1,
+                             onvalue = 3,
                              offvalue = 4,
                              command=lambda:print(CheckBox_Var.get(),datetime.datetime.now()),
                              )
@@ -29,9 +29,12 @@ CheckBox_2.pack()
 
 Frame_1 = tk.Frame(window)
 
+Frame_1_Var = tk.StringVar()
+
 Radio_Button_1 = ttk.Radiobutton(Frame_1,
                                text = "Radio Button 1",
                                value = "Radio_Button_1",
+                               variable = Frame_1_Var,
                                )
 
 Radio_Button_1.pack()
@@ -39,16 +42,24 @@ Radio_Button_1.pack()
 Radio_Button_2 = ttk.Radiobutton(Frame_1,
                                text= "Radio Button 2",
                                value = "Radio_Button_2",
+                               variable = Frame_1_Var,
                                )
 
 Radio_Button_2.pack()
 
 Frame_1.pack()
 
+
+
 Frame_2 = tk.Frame(window)
+
+Frame_2_Var = tk.StringVar()
+
 Radio_Button_3 = ttk.Radiobutton(Frame_2,
                                text = "Radio Button 3",
                                value = "Radio_Button_3",
+                               variable = Frame_2_Var,
+                               command = lambda : CheckBox_Var.set("3")
                                )
 
 Radio_Button_3.pack(side="left")
@@ -56,6 +67,8 @@ Radio_Button_3.pack(side="left")
 Radio_Button_4 = ttk.Radiobutton(Frame_2,
                                text= "Radio Button 4",
                                value = "Radio_Button_4",
+                               variable = Frame_2_Var,
+                               command = lambda : CheckBox_Var.set("0"),
                                )
 
 Radio_Button_4.pack(side="left")
