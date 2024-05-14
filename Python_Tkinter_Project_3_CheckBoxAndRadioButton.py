@@ -9,6 +9,7 @@ window.title("CheckBox And Radio Button Training")
 
 CheckBox_Var = tk.StringVar()
 
+
 CheckBox_1 = ttk.Checkbutton(window,
                              text= "CheckBox_1",
                              variable = CheckBox_Var,
