@@ -2,7 +2,10 @@ import tkinter as tk
 from tkinter import ttk
 from datetime import datetime
 
+"""
+ComboBox -Bind event "<<ComboBoxSelected>>"
 
+"""
 window = tk.Tk()
 
 window.geometry("400x300")
