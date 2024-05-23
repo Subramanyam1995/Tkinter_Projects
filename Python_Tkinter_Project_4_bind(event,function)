@@ -2,13 +2,28 @@ import tkinter as tk
 from tkinter import ttk
 from datetime import datetime
 
-# Bind
-# Widget.bind(event,funcation)
+# 
+# 
 
-# Format : Modifier - Type - Detail
-# Ex: Alt-Keypress-a
+# 
+# 
 
-# Must Add Event Varible to Lambda
+#
+
+"""
+T.t.R
+Bind
+Widget.bind(event,funcation)
+Format : Modifier - Type - Detail
+Ex: Alt-Keypress-a
+Must Add Event Varible to Lambda key_value : function to value_value
+<Motion>
+<Keypress>
+<FocusOut>
+<MouseWheel>
+https://www.pythontutorial.net/tkinter/tkinter-event-binding/
+
+"""
 
 windows = tk.Tk()
 
@@ -19,15 +34,15 @@ windows.title("EventBinding")
 
 def get_postion_1(event):
     data_var_1.set(f"Text location = x:{event.x}, y:{event.y}")
-    print(f"x:{event.x}, y:{event.y}")
+    #print(f"x:{event.x}, y:{event.y}")
 
 def get_postion_2(event):
     data_var_2.set(f"Entry location = x:{event.x}, y:{event.y}")
-    print(f"x:{event.x}, y:{event.y}")
+    #print(f"x:{event.x}, y:{event.y}")
 
 def get_postion_3(event):
     data_var_3.set(f"Button location = x:{event.x}, y:{event.y}")
-    print(f"x:{event.x}, y:{event.y}")
+    #print(f"x:{event.x}, y:{event.y}")
 
 data_var_1=tk.StringVar(value="God Text")
 data_var_2=tk.StringVar(value="God Entry")
@@ -67,6 +82,10 @@ button.bind("<Alt-KeyPress-a>" ,lambda event: print(f"{event} {datetime.now()}")
 text.bind("<Motion>", lambda event:get_postion_1(event))
 entry.bind("<Motion>", lambda event:get_postion_2(event))
 button.bind("<Motion>", lambda event:get_postion_3(event))
+
+entry.bind("<FocusIn>",lambda event: print("entry field was selected"))
+entry.bind("<FocusOut>",lambda event: print("entry field was unselected"))
+
 windows.mainloop()
 
 
