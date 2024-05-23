@@ -26,7 +26,7 @@ CheckBox_2 = ttk.Checkbutton(window,
                              offvalue = 4,
                              command=lambda:print(CheckBox_Var.get(),datetime.datetime.now()),
                              )
-#*
+
 CheckBox_2.pack()
 
 Frame_1 = tk.Frame(window)

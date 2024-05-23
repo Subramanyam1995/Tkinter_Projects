@@ -10,10 +10,17 @@ main_file_date = tk.StringVar()
 white_board = tk.Text(window)
 white_board.pack()
 
+search_bar = ttk.Entry(window)
+search_bar.pack()
+
 search_bar = tk.Entry(window)
 search_bar.pack()
 
+final_button = ttk.Button(window, text="Check Button")
+final_button.pack()
+
 final_button = tk.Button(window, text="Check Button")
 final_button.pack()
+
 
 window.mainloop()
