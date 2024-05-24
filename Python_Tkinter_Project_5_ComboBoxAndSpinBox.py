@@ -4,6 +4,11 @@ from datetime import datetime
 
 """
 ComboBox -Bind event "<<ComboBoxSelected>>"
+Mainly use to transfer selected Data
+
+Spin arguments (from_= , to= , increment= , command)
+spin.bind("<<Increment>>",lambda event:_)
+spin.bind("<<Decrement>>",lambda event:_)
 
 """
 window = tk.Tk()
@@ -31,5 +36,13 @@ SpainBoxs = ttk.Spinbox(window,
                         )
 
 SpainBoxs.pack()
+
+# Ecercise 
+# Create a spinbox that contains the letters ABCDE
+# and print the value whenever the value is decreased
+
+SpinBox2 = ttk.Spinbox(window, values=["A","B","C","D","E"])
+SpinBox2.bind("<<Decrement>>", lambda event:print(f"Value Decremented{datetime.now()}"))
+SpinBox2.pack()
 
 window.mainloop()
