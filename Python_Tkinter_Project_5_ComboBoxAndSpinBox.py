@@ -17,10 +17,16 @@ combo_var = tk.StringVar(value="Selected_None")
 ComboBoxs = ttk.Combobox(window, 
                          values=["Dileep","Sudeep","Subramanyam"],
                          textvariable=combo_var ,
-                          state="Disable"
+                         state="Disable"
                         )
 
 ComboBoxs.pack()
+
+#ComboBoxs.bind("<ComboSelected>",lambda event:print(combo_var.get()))
+
+Combo_Label = ttk.Label(window, textvariable=combo_var)
+
+Combo_Label.pack()
 
 SpainBoxs_var = tk.StringVar(value="Selected_None")
 
