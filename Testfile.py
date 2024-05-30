@@ -1,23 +1,23 @@
-from tkinter import * 
-from tkinter.ttk import *
-from tkinterweb import HtmlFrame
+# Import the required libraries
+from tkinter import *
+from tkinter import ttk
+from PIL import Image, ImageTk
 
-
-
-
-#Create an instance of tkinter frame
+# Create an instance of tkinter frame or window
 win = Tk()
 
-win.title("NEw")
+# Set the size of the window
+win.geometry("700x350")
 
+def on_click():
+   Buttons.after(1000,Buttons.destroy())
 
-p1 = PhotoImage(file = 'Photos\pngtree-om-trishul-tattoo-logo-design-png-image_6452847.png')  
+# Create a Label widget
+label = Label(win, text=" Deleting a Label in Python Tkinter", font=('Helvetica 15'))
+label.pack(pady=20)
 
-win.iconphoto(False, p1) 
+# Add a Button to Show/Hide Canvas Items
+Buttons=ttk.Button(win, text="Delete", command=on_click)
+Buttons.pack()
 
-b = Button(win, text = 'Press Me!') 
-b.pack(side = TOP)
-win.title('iconphoto() method')
-#win.wm_attributes('-toolwindow', 'True')
 win.mainloop()
-

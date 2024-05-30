@@ -13,7 +13,6 @@ def start_timer():
     print(f'"input_time_Sec" : {input_time_Sec.get()}')
     timer_var.set( value = input_time_var.get() )
 
-
 window = tk.Tk()
 
 window.geometry("300x200")
