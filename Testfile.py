@@ -10,7 +10,8 @@ win = Tk()
 win.geometry("700x350")
 
 def on_click():
-   Buttons.after(1000,Buttons.destroy())
+   Buttons.after(1000
+   ,Buttons.destroy())
 
 # Create a Label widget
 label = Label(win, text=" Deleting a Label in Python Tkinter", font=('Helvetica 15'))
